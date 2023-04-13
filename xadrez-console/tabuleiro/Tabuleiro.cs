@@ -1,4 +1,4 @@
-﻿namespace tauleiro
+﻿namespace tabuleiro
 {
     class Tabuleiro
     {
@@ -19,5 +19,11 @@
         {
             return pecas[linha,coluna];
         } 
+
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.linha, pos.coluna] = p; //Adiciona a peça na matriz de peças na posição desejada
+            p.posicao = pos; //Guarda a posiçã da peça na própria peça
+        }
     }
 }

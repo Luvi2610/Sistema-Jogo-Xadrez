@@ -1,4 +1,4 @@
-﻿using tauleiro;
+﻿using tabuleiro;
 
 namespace xadrez_console
 {
