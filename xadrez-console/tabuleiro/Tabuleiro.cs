@@ -44,6 +44,21 @@
             p.posicao = pos; //Guarda a posiçã da peça na própria peça
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+
+            //Ponteiro para peca
+            Peca aux = peca(pos);
+            //Tira a posição armazenada na peça
+            aux.posicao = null;
+            //Tira a peça do tabuleiro
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
+        }
 
         //Verifica se a posição passada é válida
         public bool posicaoValida(Posicao pos)
