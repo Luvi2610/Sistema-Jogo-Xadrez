@@ -35,6 +35,7 @@
 
         public void colocarPeca(Peca p, Posicao pos)
         {
+            //Verifica se não tem peça onde quer inserir 
             if(existePeca(pos))
             {
                 throw new TabuleiroException("Já existe peça nessa posição!");
